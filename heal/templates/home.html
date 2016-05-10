@@ -1,0 +1,179 @@
+{% extends "base_home.html" %}
+{% load cms_tags staticfiles %}
+{% block content %}
+		<!-- Top Slider -->
+		<section id="top-section">
+			<div class="top-section">
+				<img src="{% static 'images/banner.png' %}"
+			</div><!-- /.top-section -->
+		</section><!-- /#top-section -->
+		<!-- Top Slider End-->
+
+
+
+		<!-- About Section -->
+		<section id="sobre">
+			<div class="about-section"> 
+				<div class="white-bg  section-padding">
+					<div class="top-angle">
+					</div><!-- /.top-angle -->
+					<div class="container">
+						{% placeholder "nossa_historia_titulo" %}
+
+						<div class="section-content">
+							<div class="row">
+								<div class="content-box col-md-8 from-bottom delay-200">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span class="li_bulb"></span>
+										</div>
+									</div><!-- /.content-icon-hex -->
+									{% placeholder "nossa_historia" %}
+                </div><!-- /.content-box -->
+
+								<div class="col-md-4 media-content media-right from-bottom delay-600">
+									<div class="meida-container">
+										{% placeholder "nossa_historia_extra" %}
+									</div>
+								</div><!-- /.media-content -->
+							</div><!-- row -->
+						</div><!-- /.section-content -->
+					</div><!-- /.container -->
+				</div><!-- /.white-bg -->
+
+			</div><!-- /.about-section -->
+		</section><!-- /#about-->
+		<!-- About Section End -->
+
+
+
+		<!-- Services Section -->
+		<section id="projetos">
+			<div class="services-section gray-bg section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					{% placeholder projetos_titulo %}
+
+					<div class="section-content">
+						{% placeholder projetos %}
+					</div><!-- /.section-content -->
+				</div><!-- /.container-->
+			</div><!-- /.services-section -->
+		</section><!-- /#services -->
+		<!--Services Section End-->
+
+
+
+
+		<!-- Volunteer Section -->
+		<section id="voluntario">
+			<div class="volunteer-section">
+				<div class="white-bg section-padding no-bottom">
+
+					<div class="top-angle">
+					</div><!-- /.top-angle -->
+
+					<div class="container">
+						<div class="row">
+							<div class="section-content">
+								<div class="media-content media-left col-md-4 from-bottom delay-200">
+									<div class="meida-container">
+										{% placeholder "seja_voluntario_extra" %}
+									</div><!-- /.meida-container -->
+								</div><!-- /.media-content -->
+								<div class="content-box col-md-8 from-bottom delay-600">
+									<div class="hex content-icon-hex pull-left">
+										<div class="content-icon">
+											<span aria-hidden="true" class="li_user"></span>
+										</div>
+									</div><!-- /.content-icon-hex -->
+									{% placeholder "seja_voluntario" %}
+								</div><!-- /.content-box -->
+							</div><!-- /.section-content -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+					<div class="bottom-angle">
+					</div><!-- /.bottom-angle -->
+				</div><!-- ./gray-bg -->
+			</div><!-- /.volunteer-section -->
+		</section><!-- /#volunteer -->
+		<!-- Volunteer Section End -->
+
+		<!--Tweet Section-->
+		<div id="whatistobe-section">
+			<div class="tweet-section blue-bg">
+				<div class="section-padding">
+					<div class="container">
+						<h3 class="what-is-to-be-title">
+							"Participar da ONG Amar é simples é..."
+						</h3>
+                        {% placeholder "depoimento_voluntarios" %}
+					</div><!-- /.container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.tweet-section -->
+		</div><!-- /.tweet-section -->
+		<!--Tweet Section End-->
+
+
+		<!--News Section-->
+		<section id="imprensa">
+			<div class="news-section gray-bg  section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+					{% placeholder "imprensa_titulo" %}
+
+					{% placeholder "imprensa" %}
+				</div><!-- /.container -->
+			</div><!-- /.news-section -->
+		</section><!-- /#news -->
+		<!--News Section End-->
+
+
+		<!-- Clients Section -->
+		<section id="clients">
+			<div class="clients-section white-bg">
+				<div class="section-padding">
+					<div class="container">
+						{% placeholder "parceiros_titulo" %}
+						{% placeholder "parceiros" %}
+					</div><!-- /.container -->
+				</div><!-- /.parallax-overlay -->
+			</div><!-- /.clients-section -->
+		</section><!-- /#clients -->
+		<!-- Clients Section End -->
+
+
+
+		
+		<!-- Contact Section -->
+		<section id="contato">
+			<div class="gray-bg contact-section section-padding">
+				<div class="top-angle">
+				</div><!-- /.top-angle -->
+				<div class="container">
+                  {% placeholder "contato_titulo" %}
+				</div><!-- /.container -->
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="contact-form-container">
+                              {% placeholder "contato" %}
+							</div><!-- /.contact-form-container -->
+						</div><!-- /.col-md-6 -->
+
+						<div class="col-md-6">
+							<div class="contact-info">
+								{% placeholder "contato_extra" %}
+							</div><!-- /.contact-info -->
+						</div><!-- /.col-md-6 -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+				<div class="bottom-angle">
+				</div><!-- /.bottom-angle -->
+			</div><!-- /.contact-section -->
+		</section><!-- /#contact -->
+		<!-- Contact Section End -->
+{% endblock %}

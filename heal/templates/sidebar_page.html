@@ -1,0 +1,18 @@
+{% extends "base_internal.html" %}
+{% load cms_tags %}
+
+
+{% block content %}
+  <div class="container blog-page-container">
+    <div id="blog-section" class="col-md-8 blog-section">
+      <article class="post-content">
+        {% placeholder "conteudo_pagina" %}
+      </article>
+    </div><!-- /#blog-section -->
+
+
+    <aside id="blog-sidebar" class="col-md-4 blog-sidebar">
+      {% static_placeholder "pages_sidebar" %}
+    </aside><!-- /#blog-sidebar -->
+  </div>
+{% endblock %}

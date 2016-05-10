@@ -1,0 +1,32 @@
+{% extends 'base_internal.html' %}
+{% load cms_tags %}
+{% block content %}
+  <div class="container blog-page-container">
+    <div id="blog-section" class="col-md-8 blog-section">
+        <!-- Post Box-->
+        <div class="row post-box">
+            <div class="col-sm-12">
+                <article class="post-content">
+                    {% block featured_image %}
+                        <figure class="featured-image">
+                            <img src="{{ project.photo.url }}">
+                        </figure>
+                    {% endblock %}
+
+                    <h1 class="post-title">
+                        {% render_model project "name" %}
+                    </h1>
+                    {% render_model project "text" %}
+                </article> <!-- /.post-content -->
+            </div><!-- /.col-sm-10 -->
+        </div><!-- /#post-box --><!-- /.row -->
+        <!-- Post Box End -->
+    </div><!-- /#blog-section -->
+
+
+    <aside id="blog-sidebar" class="col-md-4 blog-sidebar">
+      {% include 'projects/_widget_list_all.html' with projects=other_projects title="Conheça também" %}
+      {% static_placeholder "sidebar_projeto" %}
+    </aside><!-- /#blog-sidebar -->
+  </div>
+{% endblock %}
